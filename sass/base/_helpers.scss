@@ -1,0 +1,14 @@
+@use "../abstracts/mixins" as *;
+.main {
+  &__hero,
+  &__snippets,
+  &__access,
+  &__workflow,
+  &__clients,
+  &__app,
+  &__footer {
+    &__section {
+      @include section-max-width;
+    }
+  }
+}

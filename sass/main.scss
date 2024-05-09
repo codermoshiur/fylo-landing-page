@@ -1,0 +1,217 @@
+@use "./abstracts/" as *;
+@use "./base/" as *;
+@use "./components/" as *;
+.main {
+  text-align: center;
+  @include grid(auto, 9.375rem);
+  &__hero {
+    @include center-content;
+    background: {
+      image: url(../assets/images/bg-header-mobile.png);
+      repeat: no-repeat;
+      size: 100% auto;
+    }
+    @include mobile-landscape {
+      background: {
+        image: url(../assets/images/bg-header-desktop.png);
+      }
+    }
+    &__section {
+      @include grid(auto, 4rem);
+      &__logo {
+        margin-top: 7.8125rem;
+        &__link {
+          display: inline-block;
+        }
+      }
+      &__content {
+        &__description {
+          @include content-max-width;
+          margin-bottom: 3rem;
+        }
+        &__buttons {
+          @include buttons;
+        }
+      }
+    }
+  }
+  &__snippets {
+    &__section {
+      @include grid(auto, 4.0625rem);
+      &__overview {
+        &__description {
+          @include content-max-width;
+        }
+      }
+      &__features {
+        overflow: hidden;
+        @include grid(auto, 3.4375rem);
+        justify-items: center;
+        @include laptop {
+          @include grid(repeat(2, auto), 3.4375rem);
+          align-items: center;
+          transform: translateX(-6.25rem);
+        }
+        @include desktop {
+          transform: translateX(-3.125rem);
+        }
+        &__items {
+          @include content-max-width;
+          @include grid(auto, 3rem);
+          @include tablet {
+            max-width: 100%;
+            @include grid(repeat(3, 1fr), 1.5rem);
+          }
+          @include laptop {
+            max-width: 21.875rem;
+            text-align: left;
+            @include grid(auto, 3rem);
+          }
+        }
+      }
+    }
+  }
+  &__access {
+    &__section {
+      @include grid(auto, 4rem);
+      justify-content: center;
+      @include laptop {
+        gap: 6.875rem;
+      }
+      &__overview {
+        &__description {
+          @include content-max-width;
+        }
+      }
+    }
+  }
+  &__workflow {
+    &__section {
+      @include grid(auto, 4rem);
+      @include laptop {
+        gap: 4.5rem;
+      }
+      &__tools {
+        &__items {
+          @include grid(auto, 3.5rem);
+          @include tablet {
+            @include grid(repeat(3, 1fr), 1.5rem);
+          }
+          @include laptop {
+            gap: 3.5rem;
+          }
+        }
+        &__item {
+          @include content-max-width;
+          &__image {
+            margin-inline: auto;
+            margin-bottom: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+  &__clients {
+    &__section {
+      &__logo {
+        @include grid(auto, 3.75rem);
+        justify-items: center;
+        align-items: center;
+        @include mobile-landscape {
+          @include grid(repeat(2, auto), 3.75rem);
+          justify-content: space-evenly;
+        }
+        @include tablet {
+          @include grid(repeat(3, auto), 3.75rem);
+        }
+        @include laptop {
+          @include grid(repeat(5, auto), 4.5rem);
+        }
+      }
+    }
+  }
+  &__app {
+    &__section {
+      @include section-max-width;
+      &__content {
+        @include content-max-width;
+        &__description {
+          margin: 1.3125rem 0 3rem;
+        }
+        &__buttons {
+          @include buttons;
+        }
+      }
+    }
+  }
+  &__footer {
+    background-color: lighten($clr-grayish-blue, 25%);
+    padding: 2.4375rem 0;
+    &__section {
+      @include grid(auto, 2.5rem);
+      justify-items: center;
+      @include laptop {
+        @include grid(auto 1fr auto, 8.4375rem);
+        justify-items: start;
+        align-items: center;
+        justify-content: start;
+      }
+      &__logo {
+        &__link {
+          display: inline-block;
+          &__image {
+            width: 3.4375rem;
+            height: 3.4375rem;
+          }
+        }
+      }
+      &__nav {
+        &__list {
+          @include grid(auto, 1.25rem);
+          @include tablet {
+            @include grid(repeat(5, 1fr), 1.25rem);
+          }
+          @include laptop {
+            @include grid(repeat(3, auto), 1.875rem);
+            text-align: left;
+          }
+          &__item {
+            @include laptop {
+              &:nth-child(1) {
+                grid-column: 1/2;
+              }
+              &:nth-child(2) {
+                grid-column: 1/2;
+                grid-row: 2/3;
+              }
+              &:nth-child(3) {
+                grid-column: 2/3;
+              }
+              &:nth-child(4) {
+                grid-column: 2/3;
+                grid-row: 2/3;
+              }
+              &:nth-child(4) {
+                grid-column: 3/4;
+                grid-row: 1/2;
+              }
+            }
+            &__link {
+              &:is(:link, :visited) {
+                color: $clr-dark-grayish-blue;
+                letter-spacing: 0.0088rem;
+                font-size: 1.125rem;
+              }
+              &:is(:hover, :active) {
+                color: $clr-strong-cyan;
+              }
+            }
+          }
+        }
+      }
+      &__social-icons {
+        @include flex(2.5rem);
+      }
+    }
+  }
+}
