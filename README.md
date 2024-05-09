@@ -10,8 +10,8 @@
 
 ### Links
 
-- Solution URL: []()
-- Live Site URL: []()
+- Solution URL: [https://www.frontendmentor.io/solutions/clipboard-landing-page-using-sass-i3qt6F8GI9](https://www.frontendmentor.io/solutions/clipboard-landing-page-using-sass-i3qt6F8GI9)
+- Live Site URL: [https://codermoshiur.github.io/clipboard-landing-page/](https://codermoshiur.github.io/clipboard-landing-page/)
 
 ## My process
 
