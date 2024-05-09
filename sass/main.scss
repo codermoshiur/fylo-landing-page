@@ -37,6 +37,9 @@
   }
   &__snippets {
     &__section {
+      @include desktop {
+        padding: 0;
+      }
       @include grid(auto, 4.0625rem);
       &__overview {
         &__description {
@@ -44,16 +47,12 @@
         }
       }
       &__features {
-        overflow: hidden;
         @include grid(auto, 3.4375rem);
         justify-items: center;
         @include laptop {
           @include grid(repeat(2, auto), 3.4375rem);
           align-items: center;
           transform: translateX(-6.25rem);
-        }
-        @include desktop {
-          transform: translateX(-3.125rem);
         }
         &__items {
           @include content-max-width;
@@ -64,6 +63,7 @@
           }
           @include laptop {
             max-width: 21.875rem;
+            margin-inline-start: 0;
             text-align: left;
             @include grid(auto, 3rem);
           }
