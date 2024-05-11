@@ -309,7 +309,7 @@ input {
 @media (min-width: 64.0625rem) {
   .main .features__section {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 55% 45%);
     gap: 5.5rem;
     align-items: center;
   }
@@ -332,6 +332,11 @@ input {
 }
 .main .features__section__content__description {
   color: hsl(238, 22%, 44%);
+}
+@media (min-width: 64.0625rem) {
+  .main .features__section__content__description {
+    max-width: 33.0625rem;
+  }
 }
 .main .features__section__content__cta {
   max-width: 8.125rem;
