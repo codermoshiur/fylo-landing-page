@@ -10,8 +10,8 @@
 
 ### Links
 
-- Solution URL: []()
-- Live Site URL: []()
+- Solution URL: [https://www.frontendmentor.io/solutions/fylo-landing-page-using-sass-48wydyje9k](https://www.frontendmentor.io/solutions/fylo-landing-page-using-sass-48wydyje9k)
+- Live Site URL: [https://codermoshiur.github.io/fylo-landing-page/](https://codermoshiur.github.io/fylo-landing-page/)
 
 ## My process
 
