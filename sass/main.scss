@@ -1,216 +1,311 @@
 @use "./abstracts/" as *;
 @use "./base/" as *;
 @use "./components/" as *;
-.main {
-  text-align: center;
-  @include grid(auto, 9.375rem);
-  &__hero {
-    @include center-content;
-    background: {
-      image: url(../assets/images/bg-header-mobile.png);
-      repeat: no-repeat;
-      size: 100% auto;
-    }
-    @include mobile-landscape {
-      background: {
-        image: url(../assets/images/bg-header-desktop.png);
+.header {
+  padding: 1.5rem 0;
+  @include laptop {
+    padding: 4.0625rem 0;
+  }
+  &__section {
+    @include flex(1.5rem);
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    &__link {
+      &__image {
+        width: 5rem;
+        @include desktop {
+          width: 10.375rem;
+        }
       }
     }
-    &__section {
-      @include grid(auto, 4rem);
-      &__logo {
-        margin-top: 7.8125rem;
+  }
+  &__menu {
+    &__list {
+      @include flex(1.5rem);
+      flex-wrap: wrap;
+      @include laptop {
+        gap: 3.5625rem;
+      }
+      &__item {
         &__link {
-          display: inline-block;
-        }
-      }
-      &__content {
-        &__description {
-          @include content-max-width;
-          margin-bottom: 3rem;
-        }
-        &__buttons {
-          @include buttons;
-        }
-      }
-    }
-  }
-  &__snippets {
-    &__section {
-      @include desktop {
-        padding: 0;
-      }
-      @include grid(auto, 4.0625rem);
-      &__overview {
-        &__description {
-          @include content-max-width;
-        }
-      }
-      &__features {
-        @include grid(auto, 3.4375rem);
-        justify-items: center;
-        @include laptop {
-          @include grid(repeat(2, auto), 3.4375rem);
-          align-items: center;
-          transform: translateX(-6.25rem);
-        }
-        &__items {
-          @include content-max-width;
-          @include grid(auto, 3rem);
-          @include tablet {
-            max-width: 100%;
-            @include grid(repeat(3, 1fr), 1.5rem);
+          @include is-link-visited {
+            color: $clr-very-dark-blue;
           }
-          @include laptop {
-            max-width: 21.875rem;
-            margin-inline-start: 0;
-            text-align: left;
-            @include grid(auto, 3rem);
+          @include is-hover-active {
+            color: $clr-desaturated-blue;
           }
         }
       }
     }
   }
-  &__access {
-    &__section {
-      @include grid(auto, 4rem);
-      justify-content: center;
-      @include laptop {
-        gap: 6.875rem;
-      }
-      &__overview {
-        &__description {
-          @include content-max-width;
-        }
-      }
-    }
-  }
-  &__workflow {
-    &__section {
-      @include grid(auto, 4rem);
-      @include laptop {
-        gap: 4.5rem;
-      }
-      &__tools {
-        &__items {
-          @include grid(auto, 3.5rem);
-          @include tablet {
-            @include grid(repeat(3, 1fr), 1.5rem);
-          }
-          @include laptop {
-            gap: 3.5rem;
-          }
-        }
-        &__item {
-          @include content-max-width;
-          &__image {
-            margin-inline: auto;
-            margin-bottom: 2.5rem;
-          }
-        }
-      }
-    }
-  }
-  &__clients {
-    &__section {
-      &__logo {
-        @include grid(auto, 3.75rem);
-        justify-items: center;
-        align-items: center;
-        @include mobile-landscape {
-          @include grid(repeat(2, auto), 3.75rem);
-          justify-content: space-evenly;
-        }
-        @include tablet {
-          @include grid(repeat(3, auto), 3.75rem);
-        }
-        @include laptop {
-          @include grid(repeat(5, auto), 4.5rem);
-        }
-      }
-    }
-  }
-  &__app {
-    &__section {
-      @include section-max-width;
-      &__content {
-        @include content-max-width;
-        &__description {
-          margin: 1.3125rem 0 3rem;
-        }
-        &__buttons {
-          @include buttons;
-        }
-      }
-    }
-  }
-  &__footer {
-    background-color: lighten($clr-grayish-blue, 25%);
-    padding: 2.4375rem 0;
+}
+.main {
+  .hero {
+    padding-bottom: 5.625rem;
     &__section {
       @include grid(auto, 2.5rem);
-      justify-items: center;
       @include laptop {
-        @include grid(auto 1fr auto, 8.4375rem);
-        justify-items: start;
+        @include grid(repeat(2, 1fr), 3.4375rem);
         align-items: center;
-        justify-content: start;
       }
-      &__logo {
-        &__link {
-          display: inline-block;
-          &__image {
-            width: 3.4375rem;
-            height: 3.4375rem;
+      &__image {
+        @include laptop {
+          order: 1;
+        }
+      }
+      &__content {
+        text-align: center;
+        @include grid(auto, 1.5rem);
+        @include laptop {
+          text-align: left;
+        }
+        &__subscribe {
+          &__form {
+            @include grid(auto, 1rem);
+            @include tablet {
+              @include grid(1fr auto, 1rem);
+            }
+            &__email-field {
+              @include subscribe-form-email-field;
+            }
+          }
+          &__success-message {
+            color: $clr-bright-blue;
           }
         }
       }
-      &__nav {
-        &__list {
-          @include grid(auto, 1.25rem);
-          @include tablet {
-            @include grid(repeat(5, 1fr), 1.25rem);
+    }
+  }
+  .features {
+    background: {
+      image: url(../assets/images/bg-curve-mobile.svg);
+      repeat: no-repeat;
+      size: cover;
+      position: center;
+    }
+    @include laptop {
+      background: {
+        image: url(../assets/images/bg-curve-desktop.svg);
+        repeat: no-repeat;
+        size: cover;
+        position: center;
+      }
+    }
+    &__section {
+      @include grid(auto, 5.5rem);
+      @include laptop {
+        @include grid(repeat(2, 1fr), 5.5rem);
+        align-items: center;
+      }
+      &__image {
+        @include laptop {
+          order: 1;
+        }
+      }
+      &__content {
+        text-align: center;
+        @include grid(auto, 1.5rem);
+        @include laptop {
+          text-align: left;
+        }
+        &__description {
+          color: $clr-desaturated-blue;
+        }
+        &__cta {
+          max-width: 8.125rem;
+          margin-inline: auto;
+          @include flex(0.5rem);
+          align-items: center;
+          border-bottom: 0.0625rem solid $clr-moderate-cyan;
+          cursor: pointer;
+          @include laptop {
+            max-width: 10.375rem;
+            margin-inline: 0;
+          }
+          &__link {
+            font-size: 0.75rem;
+            @include laptop {
+              font-size: 1rem;
+            }
+            color: $clr-moderate-cyan;
+          }
+          &__image {
+            width: 0.75rem;
+            height: 0.75rem;
+          }
+        }
+        &__feedback {
+          background-color: $clr-white;
+          margin-top: 1.5rem;
+          @include grid(auto, 1rem);
+          text-align: left;
+          padding: 1.5rem;
+          border-radius: 0.3125rem;
+          box-shadow: 0 0 0.625rem 0.3125rem $clr-shadow;
+          @include mobile-landscape {
+            padding: 2.0625rem;
+            max-width: 80%;
+            margin-inline: auto;
           }
           @include laptop {
-            @include grid(repeat(3, auto), 1.875rem);
-            text-align: left;
+            max-width: 22.25rem;
+            margin-inline: 0;
           }
-          &__item {
+          &__quotes {
+            font-size: 0.625rem;
+            letter-spacing: 0.0238rem;
             @include laptop {
-              &:nth-child(1) {
-                grid-column: 1/2;
-              }
-              &:nth-child(2) {
-                grid-column: 1/2;
-                grid-row: 2/3;
-              }
-              &:nth-child(3) {
-                grid-column: 2/3;
-              }
-              &:nth-child(4) {
-                grid-column: 2/3;
-                grid-row: 2/3;
-              }
-              &:nth-child(4) {
-                grid-column: 3/4;
-                grid-row: 1/2;
-              }
+              font-size: 0.8125rem;
+              line-height: 1.4375rem;
             }
-            &__link {
-              &:is(:link, :visited) {
-                color: $clr-dark-grayish-blue;
-                letter-spacing: 0.0088rem;
-                font-size: 1.125rem;
+          }
+          &__client {
+            @include flex(0.5rem);
+            align-items: center;
+            &__image {
+              width: 1.5rem;
+              height: 1.5rem;
+              border-radius: 50%;
+            }
+            &__info {
+              &__name {
+                font-size: 0.5625rem;
+                letter-spacing: 0.0281rem;
+                font-weight: 700;
+                line-height: 1;
+                @include laptop {
+                  font-size: 0.6875rem;
+                  letter-spacing: 0.0344rem;
+                }
               }
-              &:is(:hover, :active) {
-                color: $clr-strong-cyan;
+              &__role {
+                font-size: 0.375rem;
+                letter-spacing: 0.0187rem;
+                line-height: 0.7375rem;
+                @include laptop {
+                  font-size: 0.5rem;
+                  line-height: 0.9375rem;
+                }
               }
             }
           }
         }
       }
-      &__social-icons {
-        @include flex(2.5rem);
+    }
+  }
+  .access {
+    text-align: center;
+    background-color: $clr-desaturated-blue;
+    @include laptop {
+      text-align: left;
+    }
+    &__section {
+      &__content {
+        @include grid(auto, 1.5rem);
+        @include laptop {
+          @include grid(repeat(2, 1fr), 9.375rem);
+          align-content: center;
+        }
+        @include desktop {
+          gap: 14.375rem;
+        }
+        &__overview {
+          &__title,
+          &__description {
+            color: $clr-white;
+          }
+          &__title {
+            margin-bottom: 1rem;
+          }
+        }
+        &__subscribe {
+          &__form {
+            @include grid(auto, 1rem);
+            justify-items: center;
+            @include laptop {
+              justify-items: start;
+            }
+            &__email-field {
+              @include subscribe-form-email-field;
+              border-color: $clr-white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.footer {
+  background-color: $clr-very-dark-blue;
+  &__section {
+    @include grid(auto, 2rem);
+    &__top {
+      &__logo {
+        width: 6.5625rem;
+        @include laptop {
+          width: 8.4375rem;
+        }
+      }
+    }
+    &__bottom {
+      @include grid(auto, 2rem);
+      @include tablet {
+        @include grid(repeat(4, auto), 2rem);
+      }
+      &__contact {
+        @include grid(auto, 1rem);
+        align-content: start;
+        &__info {
+          @include flex(1rem);
+          align-items: center;
+          &__image {
+            width: 1.5rem;
+            height: auto;
+          }
+          &__phone,
+          &__email {
+            color: $clr-white;
+          }
+        }
+      }
+      &__menu {
+        &__list {
+          @include grid(auto, 1rem);
+          &__item {
+            &__link {
+              @include is-link-visited {
+                color: $clr-white;
+              }
+              @include is-hover-active {
+                color: $clr-bright-blue;
+              }
+            }
+          }
+        }
+      }
+      &__social-icons-list {
+        @include flex(1rem);
+        &__item {
+          &__link {
+            border: 0.0625rem solid $clr-white;
+            border-radius: 50%;
+            width: 2rem;
+            height: 2rem;
+            display: inline-block;
+            @include flex(null);
+            justify-content: center;
+            align-items: center;
+            @include is-link-visited {
+              color: $clr-white;
+            }
+            @include is-hover-active {
+              color: $clr-bright-blue;
+              border-color: $clr-bright-blue;
+            }
+          }
+        }
       }
     }
   }

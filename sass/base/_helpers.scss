@@ -1,14 +1,27 @@
 @use "../abstracts/mixins" as *;
-.main {
-  &__hero,
-  &__snippets,
-  &__access,
-  &__workflow,
-  &__clients,
-  &__app,
-  &__footer {
-    &__section {
-      @include section-max-width;
+.features,
+.access,
+.footer {
+  padding: 5.625rem 0;
+}
+
+.header,
+.hero,
+.features,
+.access,
+.footer {
+  &__section {
+    @include section-max-width;
+  }
+}
+
+.hero,
+.features,
+.access {
+  &__section {
+    &__image,
+    &__content {
+      @include content-max-width;
     }
   }
 }

@@ -1,36 +1,49 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
-
 body {
   @include font-primary;
-  font-size: 1rem;
-  color: $clr-grayish-blue;
-  font-weight: 400;
-  line-height: 1.625rem;
+  font-size: 0.875rem;
+  color: $clr-very-dark-blue;
+  line-height: 1.3125rem;
   -webkit-font-smoothing: antialiased;
+  @include laptop {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
-
 h1,
 h2,
 h3 {
   @include font-secondary;
-  color: $clr-dark-grayish-blue;
-  margin-bottom: 1rem;
-  line-height: 1;
+  color: $clr-very-dark-blue;
 }
-
 h1 {
-  font-size: 2rem;
-  @include laptop {
-    font-size: 2.875rem;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  @include desktop {
+    font-size: 2.5rem;
+    line-height: 3.75rem;
   }
 }
 h2 {
-  font-size: 1.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
   @include laptop {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
+    line-height: 3.75rem;
   }
 }
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  @include laptop {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
 }
+nav,
+input {
+  font-family: $font-secondary;
+}
+
+

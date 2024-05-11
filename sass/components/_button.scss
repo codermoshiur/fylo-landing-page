@@ -2,40 +2,21 @@
 @use "../abstracts/mixins" as *;
 
 .btn {
-  &:is(:link, :visited) {
-    background-color: $clr-dark-grayish-blue;
-    color: $clr-white;
-    display: inline-block;
-    font-size: 1.125rem;
-    @include font-secondary;
-    padding: 0.8125rem 2.25rem;
-    width: 100%;
-    @include mobile-landscape {
-      width: inherit;
-    }
-    border-bottom: 0.1875rem solid $clr-grayish-blue;
-    border-radius: 1.75rem;
-    box-shadow: 0 0.625rem 1.25rem 0 $clr-dark-grayish-blue;
-    transition: 0.3s ease;
+  background-color: $clr-bright-blue;
+  color: $clr-white;
+  display: inline-block;
+  @include font-secondary;
+  padding: 0.75rem 3.75rem;
+  width: 100%;
+  @include tablet {
+    width: fit-content;
+    padding: 0.9375rem 3.75rem;
   }
-  &--tealish {
-    &:is(:link, :visited) {
-      background-color: $clr-strong-cyan;
-      border-color: $clr-btn-border-cyan;
-      box-shadow: 0 0.625rem 1.25rem 0 $clr-btn-shadow-tealish;
-    }
-    &:is(:hover, :active) {
-      background-color: darken($clr-strong-cyan, 10%);
-    }
-  }
-  &--light-blue {
-    &:is(:link, :visited) {
-      background-color: $clr-light-blue;
-      border-color: $clr-btn-border-light-blue;
-      box-shadow: 0 0.625rem 1.25rem 0 $clr-btn-shadow-light-blue;
-    }
-    &:is(:hover, :active) {
-      background-color: darken($clr-light-blue, 10%);
-    }
+  border: 0.0625rem solid $clr-bright-blue;
+  border-radius: 0.1956rem;
+  transition: 0.3s ease;
+  cursor: pointer;
+  &:hover {
+    background-color: darken($clr-bright-blue, 10%);
   }
 }

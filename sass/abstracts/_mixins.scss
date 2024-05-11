@@ -1,27 +1,30 @@
 @use "./variables" as *;
 @mixin font-primary {
-  font-family: $font;
+  font-family: $font-primary;
   font-style: normal;
   font-weight: 400;
 }
 @mixin font-secondary {
-  font-family: $font;
+  font-family: $font-secondary;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
 }
 @mixin section-max-width {
   max-width: 100%;
   margin-inline: auto;
-  padding: 0 2rem;
+  padding: 0 1.75rem;
   @include desktop {
     max-width: 90rem;
-    padding: 0 10.3125rem;
+    padding: 0 5rem;
   }
 }
 @mixin content-max-width {
   @include mobile-landscape {
-    max-width: 34.375rem;
+    max-width: 33.125rem;
     margin-inline: auto;
+  }
+  @include laptop {
+    max-width: 100%;
   }
 }
 @mixin center-content {
@@ -37,13 +40,33 @@
   display: flex;
   gap: $gap;
 }
-@mixin buttons {
-  @include flex(1.5rem);
-  flex-wrap: wrap;
-  justify-content: center;
-  @include tablet {
-    flex-wrap: nowrap;
-    gap: 1rem;
+@mixin is-link-visited {
+  &:is(:link, :visited) {
+    @content;
+  }
+}
+@mixin is-hover-active {
+  &:is(:hover, :active) {
+    @content;
+  }
+}
+@mixin placeholder {
+  color: $clr-light-gray;
+}
+@mixin focus {
+  outline: 0;
+  border-color: $clr-bright-blue;
+}
+@mixin subscribe-form-email-field {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  border: 0.0625rem solid $clr-very-dark-blue;
+  border-radius: 0.1956rem;
+  &:focus {
+    @include focus;
+  }
+  &::placeholder {
+    @include placeholder;
   }
 }
 @mixin mobile-landscape {

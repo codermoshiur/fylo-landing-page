@@ -20,7 +20,8 @@ svg {
 input,
 button,
 textarea,
-select {
+select,
+blockquote {
   font: inherit;
 }
 p,
@@ -40,4 +41,7 @@ ul {
   li {
     list-style: none;
   }
+}
+.hidden {
+  visibility: hidden;
 }

@@ -1,13 +1,13 @@
 //FONTS
-$font: "Bai Jamjuree", sans-serif;
+$font-primary: "Open Sans", sans-serif;
+$font-secondary: "Raleway", sans-serif;
 
 //COLORS
-$clr-strong-cyan: #26baa4;
-$clr-light-blue: #6173ff;
-$clr-dark-grayish-blue: #4c545c;
-$clr-grayish-blue: #9eabb2;
-$clr-white: #ffffff;
-$clr-btn-shadow-tealish: hsla(160, 64%, 72%, 50.33%);
-$clr-btn-shadow-light-blue: hsla(0, 0%, 0%, 9.88%);
-$clr-btn-border-cyan: #1b8676;
-$clr-btn-border-light-blue: #5262d8;
+$clr-very-dark-blue: hsl(243, 87%, 12%);
+$clr-desaturated-blue: hsl(238, 22%, 44%);
+$clr-bright-blue: hsl(224, 93%, 58%);
+$clr-moderate-cyan: hsl(170, 45%, 43%);
+$clr-light-grayish-blue: hsl(240, 75%, 98%);
+$clr-light-gray: hsl(0, 0%, 75%);
+$clr-white: hsl(0, 0%, 100%);
+$clr-shadow: hsla(0, 0%, 22%, 4.59%);

@@ -1,4 +1,4 @@
-# Frontend Mentor - Clipboard landing page
+# Frontend Mentor - Fylo landing page
 
 ## Overview
 
@@ -10,8 +10,8 @@
 
 ### Links
 
-- Solution URL: [https://www.frontendmentor.io/solutions/clipboard-landing-page-using-sass-i3qt6F8GI9](https://www.frontendmentor.io/solutions/clipboard-landing-page-using-sass-i3qt6F8GI9)
-- Live Site URL: [https://codermoshiur.github.io/clipboard-landing-page/](https://codermoshiur.github.io/clipboard-landing-page/)
+- Solution URL: []()
+- Live Site URL: []()
 
 ## My process
 
@@ -20,6 +20,8 @@
 - Semantic HTML5 markup
 - Sass
 - CSS Grid
+- CSS Flexbox
+- BEM Methodology
 
 ## Author
 

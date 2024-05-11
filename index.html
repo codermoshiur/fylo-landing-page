@@ -3,297 +3,332 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clipboard landing page</title>
+    <title>Fylo landing page</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon-32x32.png"
+      type="image/x-icon"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <main class="main">
-      <section class="main__hero">
-        <div class="main__hero__section">
-          <div class="main__hero__section__logo">
-            <a href="/" class="main__hero__section__logo__link">
-              <img
-                src="./assets/images/logo.svg"
-                class="main__hero__section__logo__image"
-                alt="Copy"
-              />
-            </a>
-          </div>
-          <div class="main__hero__section__content">
-            <h1 class="main__hero__section__content__title">
-              A history of everything you copy
-            </h1>
-            <p class="main__hero__section__content__description">
-              Clipboard allows you to track and organize everything you copy.
-              Instantly access your clipboard on all your devices.
-            </p>
-            <div class="main__hero__section__content__buttons">
-              <a href="/" class="btn btn--tealish">Download for iOS</a>
-              <a href="/" class="btn btn--light-blue">Download for Mac</a>
-            </div>
-          </div>
+    <header class="header">
+      <div class="header__section">
+        <div class="header__logo">
+          <a href="./index.html" class="header__logo__link">
+            <img
+              src="./assets/images/logo.svg"
+              alt="Fylo"
+              class="header__logo__link__image"
+            />
+          </a>
         </div>
-      </section>
-      <section class="main__snippets">
-        <div class="main__snippets__section">
-          <div class="main__snippets__section__overview">
-            <h2 class="main__snippets__section__overview__title">
-              Keep track of your snippets
-            </h2>
-            <p class="main__snippets__section__overview__description">
-              Clipboard instantly stores any item you copy in the cloud, meaning
-              you can access your snippets immediately on all your devices. Our
-              Mac and iOS apps will help you organize everything.
-            </p>
-          </div>
-          <div class="main__snippets__section__features">
-            <img
-              src="./assets/images/image-computer.png"
-              class="main__snippets__section__features__image"
-              alt="Computer"
-            />
-            <div class="main__snippets__section__features__items">
-              <div class="main__snippets__section__features__item">
-                <h3 class="main__snippets__section__features__item__title">
-                  Quick Search
-                </h3>
-                <p class="main__snippets__section__features__item__description">
-                  Easily search your snippets by content, category, web address,
-                  application, and more.
-                </p>
-              </div>
-              <div class="main__snippets__section__features__item">
-                <h3 class="main__snippets__section__features__item__title">
-                  iCloud Sync
-                </h3>
-                <p class="main__snippets__section__features__item__description">
-                  Instantly saves and syncs snippets across all your devices.
-                </p>
-              </div>
-              <div class="main__snippets__section__features__item">
-                <h3 class="main__snippets__section__features__item__title">
-                  Complete History
-                </h3>
-                <p class="main__snippets__section__features__item__description">
-                  Retrieve any snippets from the first moment you started using
-                  the app.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="main__access">
-        <div class="main__access__section">
-          <div class="main__access__section__overview">
-            <h2 class="main__access__section__overview__title">
-              Access Clipboard anywhere
-            </h2>
-            <p class="main__access__section__overview__description">
-              Whether you’re on the go, or at your computer, you can access all
-              your Clipboard snippets in a few simple clicks.
-            </p>
-          </div>
-          <div class="main__access__section__image">
-            <img src="./assets/images/image-devices.png" alt="Devices" />
-          </div>
-        </div>
-      </section>
-      <section class="main__workflow">
-        <div class="main__workflow__section">
-          <div class="main__workflow__section__overview">
-            <h2 class="main__workflow__section__overview__title">
-              Supercharge your workflow
-            </h2>
-            <p class="main__workflow__section__overview__description">
-              We’ve got the tools to boost your productivity.
-            </p>
-          </div>
-          <div class="main__workflow__section__tools">
-            <div class="main__workflow__section__tools__items">
-              <div class="main__workflow__section__tools__item">
-                <img
-                  src="./assets/images/icon-blacklist.svg"
-                  alt="Create blacklists"
-                  class="main__workflow__section__tools__item__image"
-                />
-                <h3 class="main__workflow__section__tools__item__title">
-                  Create blacklists
-                </h3>
-                <p class="main__workflow__section__tools__item__description">
-                  Ensure sensitive information never makes its way to your
-                  clipboard by excluding certain sources.
-                </p>
-              </div>
-              <div class="main__workflow__section__tools__item">
-                <img
-                  src="./assets/images/icon-text.svg"
-                  alt="Plain text snippets"
-                  class="main__workflow__section__tools__item__image"
-                />
-                <h3 class="main__workflow__section__tools__item__title">
-                  Plain text snippets
-                </h3>
-                <p class="main__workflow__section__tools__item__description">
-                  Remove unwanted formatting from copied text for a consistent
-                  look.
-                </p>
-              </div>
-              <div class="main__workflow__section__tools__item">
-                <img
-                  src="./assets/images/icon-preview.svg"
-                  alt="Sneak preview"
-                  class="main__workflow__section__tools__item__image"
-                />
-                <h3 class="main__workflow__section__tools__item__title">
-                  Sneak preview
-                </h3>
-                <p class="main__workflow__section__tools__item__description">
-                  Quick preview of all snippets on your Clipboard for easy
-                  access.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <div class="main__clients">
-        <div class="main__clients__section">
-          <div class="main__clients__section__logo">
-            <img
-              src="./assets/images/logo-google.png"
-              alt="Google"
-              class="main__clients__section__logo__image"
-            />
-            <img
-              src="./assets/images/logo-ibm.png"
-              alt="IBM"
-              class="main__clients__section__logo__image"
-            />
-
-            <img
-              src="./assets/images/logo-microsoft.png"
-              alt="Microsoft"
-              class="main__clients__section__logo__image"
-            />
-
-            <img
-              src="./assets/images/logo-hp.png"
-              alt="HP"
-              class="main__clients__section__logo__image"
-            />
-
-            <img
-              src="./assets/images/logo-vector-graphics.png"
-              alt="Vector  Graphics"
-              class="main__clients__section__logo__image"
-            />
-          </div>
-        </div>
+        <nav class="header__menu">
+          <ul class="header__menu__list">
+            <li class="header__menu__list__item">
+              <a href="./index.html" class="header__menu__list__item__link"
+                >Features</a
+              >
+            </li>
+            <li class="header__menu__list__item">
+              <a href="./index.html" class="header__menu__list__item__link"
+                >Team</a
+              >
+            </li>
+            <li class="header__menu__list__item">
+              <a href="./index.html" class="header__menu__list__item__link"
+                >Sign In</a
+              >
+            </li>
+          </ul>
+        </nav>
       </div>
-      <section class="main__app">
-        <div class="main__app__section">
-          <div class="main__app__section__content">
-            <h2 class="main__app__section__content__title">
-              Clipboard for iOS and Mac OS
-            </h2>
-            <p class="main__app__section__content__description">
-              Available for free on the App Store. Download for Mac or iOS, sync
-              with iCloud and you’re ready to start adding to your clipboard.
+    </header>
+    <main class="main">
+      <section class="hero">
+        <div class="hero__section">
+          <div class="hero__section__image">
+            <img
+              src="./assets/images/illustration-1.svg"
+              alt="All your files in one secure location, accessible anywhere."
+            />
+          </div>
+          <div class="hero__section__content">
+            <h1 class="hero__section__content__title">
+              All your files in one secure location, accessible anywhere.
+            </h1>
+            <p class="hero__section__content__description">
+              Fylo stores your most important files in one secure location.
+              Access them wherever you need, share and collaborate with friends,
+              family, and co-workers.
             </p>
-            <div class="main__app__section__content__buttons">
-              <a href="/" class="btn btn--tealish">Download for iOS</a>
-              <a href="/" class="btn btn--light-blue">Download for Mac</a>
+            <div class="hero__section__content__subscribe">
+              <form
+                action="./index.html"
+                method="post"
+                class="hero__section__content__subscribe__form"
+                id="subscribe-form"
+              >
+                <input
+                  type="email"
+                  name="Email address"
+                  placeholder="Enter your email..."
+                  required
+                  class="hero__section__content__subscribe__form__email-field"
+                />
+                <input type="submit" class="btn" value="Get Started" />
+              </form>
+              <div
+                id="success-message"
+                class="hidden hero__section__content__subscribe__success-message"
+              >
+                Please check your email
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <footer class="main__footer">
-        <div class="main__footer__section">
-          <div class="main__footer__section__logo">
-            <a href="/" class="main__footer__section__logo__link">
-              <img
-                src="./assets/images/logo.svg"
-                alt="Copy"
-                class="main__footer__section__logo__link__image"
-              />
-            </a>
+      <section class="features">
+        <div class="features__section">
+          <div class="features__section__image">
+            <img
+              src="./assets/images/illustration-2.svg"
+              alt="Stay productive, wherever you are"
+            />
           </div>
-          <nav class="main__footer__section__nav">
-            <ul class="main__footer__section__nav__list">
-              <li class="main__footer__section__nav__list__item">
-                <a href="/" class="main__footer__section__nav__list__item__link"
-                  >FAQs</a
+          <div class="features__section__content">
+            <h2 class="features__section__content__title">
+              Stay productive, wherever you are
+            </h2>
+            <p class="features__section__content__description">
+              Never let location be an issue when accessing your files. Fylo has
+              you covered for all of your file storage needs. <br /><br />
+              Securely share files and folders with friends, family and
+              colleagues for live collaboration. No email attachments required!
+            </p>
+            <div class="features__section__content__cta">
+              <a
+                href="./index.html"
+                class="features__section__content__cta__link"
+                >See how Fylo works</a
+              >
+              <img
+                src="./assets/images/icon-arrow.svg"
+                alt="Arrow"
+                class="features__section__content__cta__image"
+              />
+            </div>
+            <figure class="features__section__content__feedback">
+              <img
+                src="./assets/images/icon-quotes.svg"
+                alt="Quotes"
+                class="features__section__content__feedback__quotes-image"
+              />
+              <blockquote class="features__section__content__feedback__quotes">
+                Fylo has improved our team productivity by an order of
+                magnitude. Since making the switch our team has become a
+                well-oiled collaboration machine.
+              </blockquote>
+              <figcaption class="features__section__content__feedback__client">
+                <img
+                  src="./assets/images/avatar-testimonial.jpg"
+                  alt="Kyle Burton"
+                  class="features__section__content__feedback__client__image"
+                />
+                <div class="features__section__content__feedback__client__info">
+                  <p
+                    class="features__section__content__feedback__client__info__name"
+                  >
+                    Kyle Burton
+                  </p>
+                  <p
+                    class="features__section__content__feedback__client__info__role"
+                  >
+                    Founder & CEO, Huddle
+                  </p>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+      <section class="access">
+        <div class="access__section">
+          <div class="access__section__content">
+            <div class="access__section__content__overview">
+              <h3 class="access__section__content__overview__title">
+                Get early access today
+              </h3>
+              <p class="access__section__content__overview__description">
+                It only takes a minute to sign up and our free starter tier is
+                extremely generous. If you have any questions, our support team
+                would be happy to help you.
+              </p>
+            </div>
+            <div class="access__section__content__subscribe">
+              <form
+                action="./index.html"
+                method="post"
+                class="access__section__content__subscribe__form"
+                id="subscribe-form"
+              >
+                <input
+                  type="email"
+                  name="Email address"
+                  placeholder="email@example.com"
+                  required
+                  class="access__section__content__subscribe__form__email-field"
+                />
+                <input type="submit" class="btn" value="Get Started For Free" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__section">
+        <div class="footer__section__top">
+          <img
+            src="./assets/images/logo-white.svg"
+            alt="Fylo"
+            class="footer__section__top__logo"
+          />
+        </div>
+        <div class="footer__section__bottom">
+          <div class="footer__section__bottom__contact">
+            <div class="footer__section__bottom__contact__info">
+              <img
+                src="./assets/images/icon-phone.svg"
+                alt="Phone"
+                class="footer__section__bottom__contact__info__image"
+              />
+              <span class="footer__section__bottom__contact__info__phone"
+                >Phone: +1-543-123-4567</span
+              >
+            </div>
+            <div class="footer__section__bottom__contact__info">
+              <img
+                src="./assets/images/icon-email.svg"
+                alt="Email"
+                class="footer__section__bottom__contact__info__image"
+              />
+              <span class="footer__section__bottom__contact__info__email"
+                >example@fylo.com</span
+              >
+            </div>
+          </div>
+          <nav class="footer__section__bottom__menu">
+            <ul class="footer__section__bottom__menu__list">
+              <li class="footer__section__bottom__menu__list__item">
+                <a
+                  href="./index.html"
+                  class="footer__section__bottom__menu__list__item__link"
+                  >About Us</a
                 >
               </li>
-              <li class="main__footer__section__nav__list__item">
-                <a href="/" class="main__footer__section__nav__list__item__link"
-                  >Contact Us</a
+              <li class="footer__section__bottom__menu__list__item">
+                <a
+                  href="./index.html"
+                  class="footer__section__bottom__menu__list__item__link"
+                  >Jobs</a
                 >
               </li>
-              <li class="main__footer__section__nav__list__item">
-                <a href="/" class="main__footer__section__nav__list__item__link"
-                  >Privacy Policy</a
+              <li class="footer__section__bottom__menu__list__item">
+                <a
+                  href="./index.html"
+                  class="footer__section__bottom__menu__list__item__link"
+                  >Press</a
                 >
               </li>
-              <li class="main__footer__section__nav__list__item">
-                <a href="/" class="main__footer__section__nav__list__item__link"
-                  >Press Kit</a
-                >
-              </li>
-              <li class="main__footer__section__nav__list__item">
-                <a href="/" class="main__footer__section__nav__list__item__link"
-                  >Install Guide</a
+              <li class="footer__section__bottom__menu__list__item">
+                <a
+                  href="./index.html"
+                  class="footer__section__bottom__menu__list__item__link"
+                  >Blog</a
                 >
               </li>
             </ul>
           </nav>
-          <ul class="main__footer__section__social-icons">
-            <li class="main__footer__section__social-icons__list-item">
+          <nav class="footer__section__bottom__menu">
+            <ul class="footer__section__bottom__menu__list">
+              <li class="footer__section__bottom__menu__list__item">
+                <a
+                  href="./index.html"
+                  class="footer__section__bottom__menu__list__item__link"
+                  >Contact Us</a
+                >
+              </li>
+              <li class="footer__section__bottom__menu__list__item">
+                <a
+                  href="./index.html"
+                  class="footer__section__bottom__menu__list__item__link"
+                  >Terms</a
+                >
+              </li>
+              <li class="footer__section__bottom__menu__list__item">
+                <a
+                  href="./index.html"
+                  class="footer__section__bottom__menu__list__item__link"
+                  >Privacy</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <ul class="footer__section__bottom__social-icons-list">
+            <li class="footer__section__bottom__social-icons-list__item">
               <a
-                href="/"
-                class="main__footer__section__social-icons__list-item__link"
+                href="./index.html"
+                class="footer__section__bottom__social-icons-list__item__link"
               >
-                <img
-                  src="./assets/images/icon-facebook.svg"
-                  alt="Facebook"
-                  class="main__footer__section__social-icons__list-item__link__image"
-                />
+                <ion-icon name="logo-facebook"></ion-icon>
               </a>
             </li>
-            <li class="main__footer__section__social-icons__list-item">
+            <li class="footer__section__bottom__social-icons-list__item">
               <a
-                href="/"
-                class="main__footer__section__social-icons__list-item__link"
+                href="./index.html"
+                class="footer__section__bottom__social-icons-list__item__link"
               >
-                <img
-                  src="./assets/images/icon-twitter.svg"
-                  alt="Twitter"
-                  class="main__footer__section__social-icons__list-item__link__image"
-                />
+                <ion-icon name="logo-twitter"></ion-icon>
               </a>
             </li>
-            <li class="main__footer__section__social-icons__list-item">
+            <li class="footer__section__bottom__social-icons-list__item">
               <a
-                href="/"
-                class="main__footer__section__social-icons__list-item__link"
+                href="./index.html"
+                class="footer__section__bottom__social-icons-list__item__link"
               >
-                <img
-                  src="./assets/images/icon-instagram.svg"
-                  alt="Instagram"
-                  class="main__footer__section__social-icons__list-item__link__image"
-                />
+                <ion-icon name="logo-instagram"></ion-icon>
               </a>
             </li>
           </ul>
         </div>
-      </footer>
-    </main>
+      </div>
+    </footer>
+
+    <script>
+      document
+        .getElementById("subscribe-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          // Show success message
+          document.getElementById("success-message").classList.remove("hidden");
+          // Hide form
+          document.getElementById("subscribe-form").classList.add("hidden");
+        });
+    </script>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
