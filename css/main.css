@@ -309,7 +309,7 @@ input {
 @media (min-width: 64.0625rem) {
   .main .features__section {
     display: grid;
-    grid-template-columns: repeat(2, 55% 45%);
+    grid-template-columns: repeat(2, 55% calc(45% - 5.5rem));
     gap: 5.5rem;
     align-items: center;
   }

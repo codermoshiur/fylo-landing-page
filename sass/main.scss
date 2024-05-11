@@ -97,7 +97,7 @@
     &__section {
       @include grid(auto, 5.5rem);
       @include laptop {
-        @include grid(repeat(2, 55% 45%), 5.5rem);
+        @include grid(repeat(2, 55% calc(45% - 5.5rem)), 5.5rem);
         align-items: center;
       }
       &__image {
