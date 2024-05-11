@@ -43,7 +43,7 @@
 }
 .main {
   .hero {
-    padding-bottom: 5.625rem;
+    padding-bottom: 10.25rem;
     &__section {
       @include grid(auto, 2.5rem);
       @include laptop {
